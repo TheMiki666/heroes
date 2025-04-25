@@ -1,2 +1,8 @@
-<h1>¡Primera prueba superada!</h1>
-<h2>Eres la poya con cebolla</h2>
+<h1>Lista de héroes</h1>
+
+<ol>
+    <% @heroes.each do |heroe| %>
+        <li> <%= heroe.name %></li>
+    <% end %>
+
+</ol>
