@@ -1,17 +1,17 @@
 class HeroesController < ApplicationController
   def index
-    @heroes=Heroe.all
+    @heroes=Hero.all
   end
   def show
-    @heroe=Heroe.find(params[:id])
+    @hero=Hero.find(params[:id])
   end
   def new
-    @heroe=Heroe.new
+    @hero=Hero.new
   end
   def create
-    @heroe=Heroe.new(hero_params)
-    if @heroe.save
-      redirect_to(@heroe)
+    @hero=Hero.new(hero_params)
+    if @hero.save
+      redirect_to(@hero)
     else
       render :new, status: :unprocessable_entity
     end
@@ -19,6 +19,6 @@ class HeroesController < ApplicationController
 
   private
   def hero_params
-    params.expect(heroe: [ :name, :alias, :age, :id ])
+    params.expect(hero: [ :name, :alias, :age, :id ])
   end
 end
