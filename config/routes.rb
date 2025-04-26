@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   #
   root "heroes#index"
 
-  resources :heroes
+  resources :heroes do
+    resouces :powers
+  end
 end
