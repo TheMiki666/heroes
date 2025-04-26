@@ -5,3 +5,7 @@
 <h2>Edad</h2>
 <p><%= @hero.age %></p>
 <div><%= link_to "Editar héroe", edit_hero_path(@hero)%></div>
+<div><%= link_to "Despedir héroe", hero_path(@hero), data:{
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+}%></div>

@@ -31,6 +31,13 @@ class HeroesController < ApplicationController
     end
   end
 
+  def destroy
+    @hero = Hero.find(params[:id])
+    @hero.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
   def hero_params
     params.expect(hero: [ :name, :alias, :age, :id ])
