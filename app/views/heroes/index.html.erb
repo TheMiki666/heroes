@@ -2,7 +2,7 @@
 
 <ol>
     <% @heroes.each do |heroe| %>
-        <li> <a href="<%= hero_path(heroe) %>"> <%= heroe.name %> </a></li>
+        <li> <%= link_to(heroe.alias, heroe)%> </li>
     <% end %>
 
 </ol>
