@@ -4,5 +4,6 @@
     <% @heroes.each do |hero| %>
         <li> <%= link_to(hero.alias, hero)%> </li>
     <% end %>
-
 </ol>
+
+<div><%= link_to "Nuevo héroe", new_hero_path %></div>
